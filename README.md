@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📦 inventario-app2
 
-## Getting Started
+Aplicación web para gestión de inventario con historial de movimientos (entradas y salidas), desarrollada con **Next.js** y **MySQL**. Ideal para registrar productos, controlar stock y rastrear cambios hechos por distintos usuarios.
 
-First, run the development server:
+---
+
+## ✨ Características principales
+
+- ✅ CRUD de productos
+- 🔁 Registro automático en historial al hacer entradas o salidas
+- 🧑‍💻 Control de usuarios (a través de localStorage)
+- 🔐 Control de roles: admin y usuario
+- 📜 API RESTful con rutas de Next.js
+- 🔍 Historial con `JOIN` a productos y usuarios
+- ⚡ Estilo limpio y funcional (Tailwind opcional)
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- [Next.js 14+](https://nextjs.org/)
+- [React 18+](https://reactjs.org/)
+- [MySQL](https://www.mysql.com/)
+- [Tailwind CSS](https://tailwindcss.com/) (opcional)
+- Node.js 18+
+
+---
+
+## 🚀 Requisitos previos
+
+Asegúrate de tener instalado:
+
+- [Node.js (18+ recomendado)](https://nodejs.org/)
+- [MySQL Server](https://dev.mysql.com/downloads/mysql/)
+- [Git](https://git-scm.com/)
+
+---
+
+## ⚙️ Instalación paso a paso
+
+### 1. Clonar el repositorio
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/tuusuario/inventario-app2.git
+cd inventario-app2
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+npm install       # Instala las dependencias
+npm run dev      # Ejecuta el servidor en modo desarrollo
+npm run build    # Compila para producción
+npm start        # Inicia el servidor en modo producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+inventario-app2/
+├── app/                # Rutas y API handlers de Next.js
+│   ├── api/
+│   │   ├── productos/  # Endpoints para productos
+│   │   ├── historial/  # Endpoints para historial
+├── components/         # Componentes reutilizables
+├── lib/
+│   └── db.js           # Configuración de MySQL (pool de conexión)
+├── public/             # Recursos estáticos
+├── styles/             # Estilos globales
+├── .env.local          # Variables de entorno (NO subir a Git)
+├── README.md           # Este archivo
+└── package.json
